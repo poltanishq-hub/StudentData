@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="../static/dashboard_style.css" th:href="@{/dashboard_style.css}" />
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/?size=100&id=pdp190Sk7cO8&format=png&color=000000" />
+</head>
+<body>
+    <div id="log_out_container">
+        <a id="#log_out" href="/login">
+            <img src="https://img.icons8.com/?size=100&id=vGj0AluRnTSa&format=png&color=000000" width="30">Logout
+        </a>
+    </div>
+    <h1>Student Dashboard <img src="https://img.icons8.com/?size=100&id=9496&format=png&color=000000" height="25"></h1>
+    
+    
+    <div id="tab">
+        
+        <a href="#profile">
+            <button class="tablinks">My Profile</button>
+        </a>
+
+        <a href="#addCourses">
+            <button class="tablinks">Add Courses</button>
+        </a>
+
+        <a href="#removeCourses">
+            <button class="tablinks">Remove Courses</button>
+        </a>
+
+        <a href="#updateCourses">
+            <button class="tablinks">Update Courses</button>
+        </a>
+
+        <a href="#deleteCourses">
+            <button class="tablinks">Delete Courses</button>
+        </a>
+    </div>
+    <div id="dashboard">
+        <div id="profile">
+            <h2>My Profile</h2>
+            <p>Your profile details:</p>
+            <div id="profile-data">
+                <p> Student ID: Student id</p>
+            </div>
+            <button id="profile_update">Update Profile</button>
+        </div>
+        <div id="addCourses">
+            <hr>
+            <h2>Add Courses</h2>
+            <form id="addCourseForm">
+                <div id="addCourseFormInput">
+                    <input type="text" name="course" placeholder="Course" required>
+                    <input list="term" name="term_choice" placeholder="Choose Term" required>
+                    <input list="campus" name="campus_choice" placeholder="Choose campus" required><br><br>
+                    <button type="submit">Add Course</button>    
+                </div>
+                
+                <br><br>
+                
+                <div id="addCourseFormInputTemp">
+                    <p id="added_courses_in_queue">Courses which you want to add</p>
+                    <p>Fall Courses: </p>
+                    <p>Winter Courses: </p>
+                    <p>Year Long Courses: </p>
+                    <p>Total Course Credits: </p>
+
+                    <button type="submit" class="submit" name="save_changes">Save Changes</button>  
+                </div>
+                <br><br><br>
+                <div id="addCourseFormInputConfirmed">
+                    <p id="saved_courses">Current Courses</p>
+                    <p>Fall Courses: </p>
+                    <p>Winter Courses: </p>
+                    <p>Year Long Courses: </p>
+                    <p>Total Course Credits: </p>
+    
+                    <datalist id="term">
+                        <option value="Fall">
+                        <option value="Winter">
+                        <option value="Year-Long">
+                    </datalist>
+    
+                    <datalist id="campus">
+                        <option value="St.George (UTSG)">
+                        <option value="Mississauga (UTM)">
+                        <option value="Scarborough (UTSC)">
+                    </datalist>
+                </div>    
+            </form>
+        </div><br>
+        <div id="removeCourses">
+            <hr>
+            <h2>Remove Courses</h2>
+
+            <form id="removeCourseForm">
+                <div id="removeCourseFormInput">
+<!--                    <input type="text" name="course_code" placeholder="Course Code" required>-->
+                    <input list="term" name="term_choice" placeholder="Choose Term" required>
+                    <input list="enrolled_courses" name="enrolled_courses" placeholder="Choose course" required><br><br>
+                    <button type="submit" class="submit">Remove Course</button>    
+                </div>
+
+                <br><br><br>
+                
+                <div id="removeCourseFormInputTemp">
+                    <p id="remove_courses_in_queue">Courses which you want to remove</p>
+                    <p>Fall Courses: </p>
+                    <p>Winter Courses: </p>
+                    <p>Year Long Courses: </p>
+                    <p>Total Course Credits: </p>
+                    <button type="submit" class="submit">Save Changes</button>
+                </div>
+
+
+                <br><br>
+                
+                <div id="removeCourseFormInputConfirmed">
+                    <p id="saved_courses_after_removal">Current Courses</p>
+                    <p>Fall Courses: </p>
+                    <p>Winter Courses: </p>
+                    <p>Year Long Courses: </p>
+                    <p>Total Course Credits: </p>    
+                </div>
+                
+                
+            </form>
+            
+            <datalist id="enrolled_courses">
+                <option value="Course 1">
+                <option value="Course 2">
+                <option value="Course 3">
+            </datalist>
+        </div><br>
+        <div id="updateCourses">
+            <hr>
+            <h2>Update Courses</h2>
+            <form id="findCourseForm">
+                <input list="term" name="term_choice" placeholder="Choose Term" required>
+                <input list="enrolled_courses" name="enrolled_courses" placeholder="Choose course" required><br><br>
+                <button type="submit">Find Course</button>
+            </form><br><br>
+            <p>Current Course Details:</p>
+            <form id="updateCourseForm">
+                <input type="text" name="course" placeholder="Course" required>
+                <input list="term" name="term_choice" placeholder="Choose Term" required>
+                <input list="campus" name="campus_choice" placeholder="Choose campus" required><br><br>      
+                <button type="submit">Update Course</button>
+            </form><br>
+        </div>
+        <div id="deleteCourses">
+            <hr>
+            <h2>Delete Courses</h2>
+            <form id="deleteCourseForm">
+                <div id="deleteCourseFormInput">
+                    <input list="term" name="term_choice" placeholder="Choose Term" required>
+                    <input list="enrolled_courses" name="enrolled_courses" placeholder="Choose course" required><br><br>
+                    <button type="submit">Delete Course</button>    
+                </div>
+                
+                <br><br>
+                
+                <div id="deleteCourseFormShowCourses">
+                    <p id="current_courses">Current Courses</p>
+                    <p>Fall Courses: </p>
+                    <p>Winter Courses: </p>
+                    <p>Year Long Courses: </p>
+                    <p>Total Course Credits: </p>
+                </div>
+            </form><br>
+        </div>
+    </div>
+    <footer>
+        <a id="#bottom" href="#top">
+            <img src="https://img.icons8.com/?size=100&id=99967&format=png&color=1f2d3d" width="50">
+        </a>
+    </footer>
+</body>
+</html>

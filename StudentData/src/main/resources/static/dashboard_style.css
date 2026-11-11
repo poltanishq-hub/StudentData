@@ -1,0 +1,420 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #F2F2F2;
+    
+}
+
+#tab {
+    display: flex;
+    gap: 8px; /* Space between the tab buttons */
+    align-items: center;
+    border-bottom: 2px solid #ccc; /* Bottom border line under tabs */
+    padding-bottom: 0;
+}
+
+/* Ensure links don't break flex alignment */
+#tab a {
+    text-decoration: none;
+}
+
+h1 {
+    margin-block-end: 30px;
+}
+a{
+    margin-inline-end: 13.5px;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+}
+
+#logout{
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    display: flex;
+    justify-self: flex-end;
+    font-weight: bold;
+    margin-inline-end: 10px;
+    font-size: 12.5px;
+}
+
+/* Tab button styling */
+#tab .tablinks {
+    background-color: #E7E7E7;
+    color: black;
+    border: 1px solid #ccc;
+    border-bottom: none; /* Merges tab into the content area below */
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 6px 6px 0 0; /* Rounded top corners */
+    transition: background-color 0.2s ease;
+}
+
+/* Hover effect */
+#tab .tablinks:hover {
+    background-color: #CFCFCF;
+    transition: background-color 0.2s ease;
+}
+
+/* Active tab styling */
+#tab .tablinks.active {
+    background-color: #007bff;
+    color: white;
+}
+
+hr{
+    border: 1px solid #ccc;
+}
+
+#profile-data{
+    background-color: #EDEDED;
+}
+
+
+#profile_update{
+    display: flex;
+    justify-self: center;
+    padding: 15px 20px;
+    border-radius: 20px 20px;
+    border: none;
+    background-color: #284BD1;
+    color: white;
+    transition: background-color 0.2s ease;
+}
+
+#profile_update:hover{
+    background-color: #203FB3;
+    cursor: pointer;
+}
+
+#addCourseFormInput{
+    padding: 10px 10px;
+    border-radius: 10px 10px;
+    border: none;
+    width: 81.5vh;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+
+#addCourseFormInput button{
+    padding: 10px 15px;
+    border-radius: 10px 10px;
+    border: none;
+    display: flex;
+    justify-self: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    color: white;
+    background-color: #1F3FCC;
+}
+
+#addCourseFormInput button:hover{
+    background-color: #203FB3;
+    cursor: pointer;    
+}
+
+
+#addCourseFormInput input{
+    padding: 10px 20px;
+    padding-left: 10px;
+    box-shadow: black 0px 0px 2px;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+#addCourseFormInput input:focus{
+    outline: none;
+}
+
+
+#addCourseForm p{
+    font-size: 15px;
+    margin-inline-start: 8px;
+    font-weight: bold;
+}
+
+#addCourseFormInputTemp{
+    padding: 10px 10px;
+    border-radius: 10px 10px;
+    border: none;
+    width: 81.5vh;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+#addCourseFormInputTemp button{
+    padding: 10px 15px;
+    border-radius: 10px 10px;
+    border: none;
+    display: flex;
+    justify-self: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    color: white;
+    background-color: #CC2500;
+}
+
+#addCourseFormInputTemp button:hover{
+    background-color: #B32200;
+}
+
+#addCourseFormInputConfirmed{
+    padding: 10px 10px;
+    border-radius: 10px 10px;
+    border: none;
+    width: 81.5vh;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+#removeCourseFormInput{
+    padding: 10px 10px;
+    border-radius: 10px 10px;
+    border: none;
+    width: 53.8vh;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+
+#removeCourseFormInput button{
+    padding: 10px 15px;
+    border-radius: 10px 10px;
+    border: none;
+    display: flex;
+    justify-self: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    color: white;
+    background-color: #1F3FCC;
+}
+
+#removeCourseFormInput button:hover{
+    background-color: #203FB3;
+    cursor: pointer;
+}
+
+#removeCourseFormInputTemp{
+    padding: 10px 10px;
+    border-radius: 10px 10px;
+    border: none;
+    width: 81.5vh;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+#removeCourseFormInputTemp button{
+    padding: 10px 15px;
+    border-radius: 10px 10px;
+    border: none;
+    display: flex;
+    justify-self: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    color: white;
+    background-color: #CC2500;
+}
+
+#removeCourseFormInputTemp button:hover{
+    background-color: #B32200;
+}
+
+#removeCourseFormInputConfirmed{
+    padding: 10px 10px;
+    border-radius: 10px 10px;
+    border: none;
+    width: 81.5vh;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+#removeCourseForm input{
+    padding: 10px 20px;
+    padding-left: 10px;
+    box-shadow: black 0px 0px 2px;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+#removeCourseForm input:focus{
+    outline: none;
+}
+
+#removeCourseForm button{
+    padding: 10px 20px;
+    padding-left: 10px;
+    text-align: center;
+    box-shadow: black 0px 0px 2px;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+#removeCourseForm p{
+    font-size: 15px;
+    margin-inline-start: 8px;
+    font-weight: bold;
+}
+
+/*---------------------------------------------*/
+#findCourseForm{
+    padding: 10px 10px;
+    border-radius: 10px 10px;
+    border: none;
+    width: 53.8vh;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+
+#findCourseForm button{
+    padding: 10px 15px;
+    border-radius: 10px 10px;
+    border: none;
+    display: flex;
+    justify-self: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    color: white;
+    background-color: #1F3FCC;
+}
+
+#findCourseForm button:hover{
+    background-color: #203FB3;
+    cursor: pointer;
+}
+
+#updateCourseForm{
+    padding: 10px 10px;
+    border-radius: 10px 10px;
+    border: none;
+    width: 81.5vh;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+#updateCourseForm button{
+    padding: 10px 15px;
+    border-radius: 10px 10px;
+    border: none;
+    display: flex;
+    justify-self: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    color: white;
+    background-color: #CC2500;
+}
+
+#updateCourseForm button:hover{
+    background-color: #B32200;
+}
+
+#updateCourses p{
+    font-size: 15px;
+    margin-inline-start: 8px;
+    font-weight: bold;
+}
+
+#updateCourseForm input{
+    padding: 10px 20px;
+    padding-left: 10px;
+    box-shadow: black 0px 0px 2px;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+#updateCourseForm input:focus{
+    outline: none;
+}
+
+#findCourseForm input{
+    padding: 10px 20px;
+    padding-left: 10px;
+    box-shadow: black 0px 0px 2px;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+#findCourseForm input:focus{
+    outline: none;
+}
+/*---------------------------------------------*/
+#deleteCourseFormInput{
+    padding: 10px 10px;
+    border-radius: 10px 10px;
+    border: none;
+    width: 53.8vh;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+
+#deleteCourseFormInput button{
+    padding: 10px 15px;
+    border-radius: 10px 10px;
+    border: none;
+    display: flex;
+    justify-self: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    color: white;
+    background-color: #CC2500;
+}
+
+#deleteCourseFormInput button:hover{
+    background-color: #B32200;
+    cursor: pointer;
+}
+
+#deleteCourseFormShowCourses{
+    padding: 10px 10px;
+    border-radius: 10px 10px;
+    border: none;
+    width: 81.5vh;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+#deleteCourses p{
+    font-size: 15px;
+    margin-inline-start: 8px;
+    font-weight: bold;
+}
+
+
+#deleteCourseFormInput input{
+    padding: 10px 20px;
+    padding-left: 10px;
+    box-shadow: black 0px 0px 2px;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+#deleteCourseForm input:focus{
+    outline: none;
+}
+
+/*---------------------------------------------*/
+
+a{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#log_out_container {
+    padding: 10px 20px;
+    text-align: center;
+    box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.3);
+    border: none;
+    border-radius: 10px;
+    background-color: #E0E0E0;
+    
+    /* Position at top-right */
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    
+    /* Auto-fit content instead of fixed vh width */
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
